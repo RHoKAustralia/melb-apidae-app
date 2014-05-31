@@ -5,7 +5,7 @@
         android:state_checked="true"
         android:state_pressed="true" />
     <item
-        android:drawable="@drawable/a"
+        android:drawable="@drawable/b"
         android:state_pressed="true" />
     <item
         android:drawable="@drawable/a"

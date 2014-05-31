@@ -23,11 +23,10 @@
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"/>
         	<!-- Name of story edit text: -->
-	        <EditText android:id="@+id/storyNameField"
+	        <TextView android:id="@+id/storyNameFieldView"
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_gravity="center_vertical"
-	            android:hint="Enter name of story"
 	            android:layout_weight="1"/>
             
             <TextView android:layout_weight="2.5"
@@ -54,18 +53,18 @@
 	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <ImageButton android:id="@+id/photoImageButton"
+            <ImageView android:id="@+id/photoImageButtonView"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center"
-                android:onClick="onAddPhotoClick"
-                android:src="@drawable/cam_button_unpressed"
+                android:padding="20dp"
+                android:src="@drawable/down_cam"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-                <LinearLayout android:id="@+id/photoScroll"
+                <LinearLayout android:id="@+id/photoScrollView"
                     android:layout_width="fill_parent"
 			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"
@@ -79,18 +78,18 @@
 	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <ImageButton android:id="@+id/audioImageButton"
+            <ImageView android:id="@+id/audioImageButtonView"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center"
-                android:onClick="onAddAudioClick"
-                android:src="@drawable/audio_button_unpressed"
+                android:padding="20dp"
+                android:src="@drawable/down_mic"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1">
-                <LinearLayout android:id="@+id/audioScroll"
+                <LinearLayout android:id="@+id/audioScrollView"
                     android:layout_width="fill_parent"
 			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"
@@ -104,18 +103,18 @@
 	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <ImageButton android:id="@+id/tagImageButton"
+            <ImageView android:id="@+id/tagImageButtonView"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:padding="20dp"
                 android:gravity="center"
-                android:onClick="onAddTagsClick"
-                android:src="@drawable/tag_button_unpressed"
+                android:src="@drawable/down_tag"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1">
-                <LinearLayout android:id="@+id/tagScroll"
+                <LinearLayout android:id="@+id/tagScrollView"
                     android:layout_width="fill_parent"
 			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"

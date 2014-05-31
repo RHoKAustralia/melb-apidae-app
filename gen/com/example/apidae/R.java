@@ -38,13 +38,17 @@ public final class R {
     }
     public static final class id {
         public static final int audioImageButton=0x7f050005;
+        public static final int audioImageButtonView=0x7f050019;
         public static final int audioScroll=0x7f050006;
+        public static final int audioScrollView=0x7f05001a;
         public static final int button=0x7f050009;
         public static final int exit_audio_recording=0x7f050001;
-        public static final int listView1=0x7f050016;
-        public static final int name=0x7f050019;
+        public static final int listView1=0x7f05001d;
+        public static final int name=0x7f050020;
         public static final int photoImageButton=0x7f050003;
+        public static final int photoImageButtonView=0x7f050017;
         public static final int photoScroll=0x7f050004;
+        public static final int photoScrollView=0x7f050018;
         public static final int radioButtonEducationBad=0x7f05000f;
         public static final int radioButtonEducationGood=0x7f05000e;
         public static final int radioButtonFoodBad=0x7f050015;
@@ -57,22 +61,26 @@ public final class R {
         public static final int radioGroupFood=0x7f050013;
         public static final int radioGroupHealth=0x7f05000a;
         public static final int radioGroupMoney=0x7f050010;
-        public static final int rank=0x7f05001a;
+        public static final int rank=0x7f050021;
         public static final int start_audio_recording=0x7f050000;
         public static final int storyNameField=0x7f050002;
+        public static final int storyNameFieldView=0x7f050016;
         public static final int tagImageButton=0x7f050007;
+        public static final int tagImageButtonView=0x7f05001b;
         public static final int tagScroll=0x7f050008;
-        public static final int textView1=0x7f050017;
-        public static final int textView2=0x7f050018;
+        public static final int tagScrollView=0x7f05001c;
+        public static final int textView1=0x7f05001e;
+        public static final int textView2=0x7f05001f;
     }
     public static final class layout {
         public static final int audio_main=0x7f030000;
         public static final int create_story=0x7f030001;
         public static final int main=0x7f030002;
         public static final int tags_add=0x7f030003;
-        public static final int view_village=0x7f030004;
-        public static final int view_village_list=0x7f030005;
-        public static final int village_list=0x7f030006;
+        public static final int view_story=0x7f030004;
+        public static final int view_village=0x7f030005;
+        public static final int view_village_list=0x7f030006;
+        public static final int village_list=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
