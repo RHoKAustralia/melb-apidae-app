@@ -50,82 +50,75 @@
         android:layout_weight="0.1">
         <!-- Image Taking -->
         <LinearLayout android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
+	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <TextView android:id="@+id/photoImage"
+            <ImageButton android:id="@+id/photoImageButton"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Insert image photo here"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:onClick="onAddPhotoClick"
+                android:src="@drawable/cam_button_unpressed"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1">
                 <LinearLayout android:id="@+id/photoScroll"
                     android:layout_width="fill_parent"
-			        android:layout_height="wrap_content"
+			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"
 			        android:layout_weight="1">
-                    <Button android:onClick="onAddPhotoClick"
-                        android:id="@+id/addPhotoButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add Photo"/>
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
         
         <!-- Audio  -->
         <LinearLayout android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
+	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <TextView android:id="@+id/audioImage"
+            <ImageButton android:id="@+id/audioImageButton"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Insert audio photo here"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:onClick=""
+                android:src="@drawable/cam_button_unpressed"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_weight="1">
                 <LinearLayout android:id="@+id/audioScroll"
                     android:layout_width="fill_parent"
-			        android:layout_height="wrap_content"
+			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"
 			        android:layout_weight="1">
-                    <Button android:id="@+id/addAudioButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add Audio"/>
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
         
         <!-- Tags -->
         <LinearLayout android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
+	        android:layout_height="fill_parent"
 	        android:orientation="horizontal"
 	        android:layout_weight="1">
-            <TextView android:id="@+id/tagImage"
+            <ImageButton android:id="@+id/tagImageButton"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Insert tag photo here"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:onClick=""
+                android:src="@drawable/cam_button_unpressed"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_weight="1">
                 <LinearLayout android:id="@+id/tagScroll"
                     android:layout_width="fill_parent"
-			        android:layout_height="wrap_content"
+			        android:layout_height="fill_parent"
 			        android:orientation="horizontal"
 			        android:layout_weight="1">
-                    <Button android:id="@+id/addTagButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="  Add Tag  "/>
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>

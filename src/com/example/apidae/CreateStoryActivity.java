@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
@@ -35,6 +37,10 @@ public class CreateStoryActivity extends Activity{
 	LinearLayout imageScrollLayout;
 	LinearLayout audioScrollLayout;
 	LinearLayout tagScrollLayout;
+
+	ImageButton imageAddBtn;
+	ImageButton audioAddBtn;
+	ImageButton tagAddBtn;
 	
 	//Tag[] tags;
 	ArrayList<Bitmap> photos = new ArrayList<Bitmap>();
@@ -52,13 +58,15 @@ public class CreateStoryActivity extends Activity{
 		imageScrollLayout = (LinearLayout) findViewById(R.id.photoScroll);
 		audioScrollLayout = (LinearLayout) findViewById(R.id.audioScroll);
 		tagScrollLayout = (LinearLayout) findViewById(R.id.tagScroll);
-		
+
+		imageAddBtn = (ImageButton)findViewById(R.id.photoImageButton);
+		audioAddBtn = (ImageButton)findViewById(R.id.audioImageButton);
+		tagAddBtn = (ImageButton)findViewById(R.id.tagImageButton);
 	}
 	
 	public void onAddPhotoClick(View v){
 		
-		final CharSequence[] items = { "Take Photo",/* "Choose from Library",*/
-		"Cancel" };
+		final CharSequence[] items = { "Take Photo", "Cancel" };
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Add Photo");
@@ -68,12 +76,7 @@ public class CreateStoryActivity extends Activity{
 				if (items[item].equals("Take Photo")) {
 					Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE); 
 	                startActivityForResult(cameraIntent, CAMERA_REQUEST); 
-				} /*else if (items[item].equals("Choose from Library")) {
-					Intent i = new Intent(
-							Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-							 
-							startActivityForResult(i, SELECT_FILE);
-				}*/ else if (items[item].equals("Cancel")) {
+				} else if (items[item].equals("Cancel")) {
 					dialog.dismiss();
 				}
 			}
@@ -84,45 +87,15 @@ public class CreateStoryActivity extends Activity{
 	private void updateImageScroll(){
 		imageScrollLayout.removeAllViews();
 		for( Bitmap b : photos){
-			ImageButton picB = new ImageButton(this);
+			ImageView picB = new ImageView(this);
 			picB.setImageBitmap(b);
-			
-			LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+			picB.setScaleType(ScaleType.FIT_CENTER);
+			LayoutParams lp = new LayoutParams((int)(b.getWidth()*2), LayoutParams.MATCH_PARENT, 1);
 			imageScrollLayout.addView(picB, lp);
 		}
-		Button picB = new Button(this);
-		picB.setText("Add Photo");
-		picB.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				final CharSequence[] items = { "Take Photo",/* "Choose from Library",*/
-				"Cancel" };
-				
-				AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-				builder.setTitle("Add Photo");
-				builder.setItems(items, new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int item) {
-						if (items[item].equals("Take Photo")) {
-							Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE); 
-			                startActivityForResult(cameraIntent, CAMERA_REQUEST); 
-						} /*else if (items[item].equals("Choose from Library")) {
-							Intent i = new Intent(
-									Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-									 
-									startActivityForResult(i, SELECT_FILE);
-						}*/ else if (items[item].equals("Cancel")) {
-							dialog.dismiss();
-						}
-					}
-				});
-				builder.show();
-			}
-		});
-		
-		LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		imageScrollLayout.addView(picB, lp);
+		if(photos.size()>0){
+			imageAddBtn.setImageResource(R.drawable.cam_button_pressed);
+		}
 	}
 	
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
