@@ -14,7 +14,7 @@
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="2">
+        android:layout_weight="0.05">
         
         <LinearLayout android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -47,7 +47,7 @@
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="0.1">
         <!-- Image Taking -->
         <LinearLayout android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
