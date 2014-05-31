@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="New Story"
+        android:gravity="center"
+        android:textSize="36dp"/>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <TextView android:layout_weight="2.5"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+        	<!-- Name of story edit text: -->
+	        <EditText android:id="@+id/storyNameField"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:hint="Enter name of story"
+	            android:layout_weight="1"/>
+            
+            <TextView android:layout_weight="2.5"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"/>
+        </LinearLayout>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2.5"
+	        android:text="Map goes here"
+	        android:gravity="center"
+	        android:textSize="20dp"/>
+        
+    </LinearLayout>
+    
+    <!-- Following is to do with seting up adding photos and audio etc. -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <!-- Image Taking -->
+        <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1">
+            <TextView android:id="@+id/photoImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert image photo here"
+                android:layout_weight="2"/>
+            
+            <HorizontalScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_weight="1">
+                    <Button android:id="@+id/addPhotoButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Photo"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        
+        <!-- Audio  -->
+        <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1">
+            <TextView android:id="@+id/audioImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert audio photo here"
+                android:layout_weight="2"/>
+            
+            <HorizontalScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_weight="1">
+                    <Button android:id="@+id/addAudioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Audio"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        
+        <!-- Tags -->
+        <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1">
+            <TextView android:id="@+id/tagImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert tag photo here"
+                android:layout_weight="2"/>
+            
+            <HorizontalScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_weight="1">
+                    <Button android:id="@+id/addTagButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Add Tag  "/>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
