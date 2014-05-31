@@ -3,7 +3,7 @@ package com.example.apidae;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class MyActivity extends Activity {
+public class LocationSelectActivity extends Activity {
     /**
      * Called when the activity is first created.
      */
@@ -14,5 +14,10 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+    }
+
+    public void viewVillage(View view) {
+        Intent intent = new Intent(this, ViewVillageActivity.class);
+        startActivity(intent);
     }
 }
