@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save/Return"
+            android:onClick="onSaveReturnClick"
+            android:textSize="18dp"/>
+        
+	    <TextView android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Select Tags"
+	        android:textSize="20dp"
+	        android:gravity="center"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"/>
+        
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="16"
+            android:src="@drawable/down_health"/>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:paddingLeft="15dp"
+	        android:text="Health"
+	        android:textSize="20dp"
+	        android:gravity="center_vertical"/>
+        
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+        <RadioGroup android:id="@+id/radioGroupHealth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            
+            <RadioButton android:id="@+id/radioButtonHealthGood"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:button="@android:color/transparent"
+			    android:gravity="center"
+			    android:checked="false"
+			    android:text="Good for" />
+        
+	        <TextView android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1.75"/>
+	        
+            <RadioButton android:id="@+id/radioButtonHealthBad"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:gravity="center"
+			    android:button="@android:color/transparent"
+			    android:checked="false"
+			    android:text="Bad for" />
+            
+        </RadioGroup>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"/>
+        
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="16"
+            android:src="@drawable/down_education"/>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:paddingLeft="15dp"
+	        android:text="Education"
+	        android:textSize="20dp"
+	        android:gravity="center_vertical"/>
+        
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+        <RadioGroup android:id="@+id/radioGroupEducation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            
+            <RadioButton android:id="@+id/radioButtonEducationGood"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:button="@android:color/transparent"
+			    android:gravity="center"
+			    android:checked="false"
+			    android:text="Good for" />
+        
+	        <TextView android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1.75"/>
+	        
+            <RadioButton android:id="@+id/radioButtonEducationBad"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:gravity="center"
+			    android:button="@android:color/transparent"
+			    android:checked="false"
+			    android:text="Bad for" />
+            
+        </RadioGroup>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"/>
+        
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="16"
+            android:src="@drawable/down_money"/>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:paddingLeft="15dp"
+	        android:text="Money"
+	        android:textSize="20dp"
+	        android:gravity="center_vertical"/>
+        
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+        <RadioGroup android:id="@+id/radioGroupMoney"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            
+            <RadioButton android:id="@+id/radioButtonMoneyGood"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:button="@android:color/transparent"
+			    android:gravity="center"
+			    android:checked="false"
+			    android:text="Saving" />
+        
+	        <TextView android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1.75"/>
+	        
+            <RadioButton android:id="@+id/radioButtonMoneyBad"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:gravity="center"
+			    android:button="@android:color/transparent"
+			    android:checked="false"
+			    android:text="Spending" />
+            
+        </RadioGroup>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3"/>
+        
+        <ImageView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="16"
+            android:src="@drawable/down_food"/>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:paddingLeft="15dp"
+	        android:text="Food"
+	        android:textSize="20dp"
+	        android:gravity="center_vertical"/>
+        
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.65"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+        <RadioGroup android:id="@+id/radioGroupFood"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            
+            <RadioButton android:id="@+id/radioButtonFoodGood"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:button="@android:color/transparent"
+			    android:gravity="center"
+			    android:checked="false"
+			    android:text="Enough" />
+        
+	        <TextView android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1.75"/>
+	        
+            <RadioButton android:id="@+id/radioButtonFoodBad"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:background="@drawable/radio_ab"
+			    android:gravity="center"
+			    android:button="@android:color/transparent"
+			    android:checked="false"
+			    android:text="Not Enough" />
+            
+        </RadioGroup>
+        
+        <TextView android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="4"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

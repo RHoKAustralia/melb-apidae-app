@@ -83,7 +83,7 @@
                 android:layout_height="fill_parent"
                 android:gravity="center"
                 android:onClick=""
-                android:src="@drawable/cam_button_unpressed"
+                android:src="@drawable/audio_button_unpressed"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"
@@ -107,8 +107,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center"
-                android:onClick=""
-                android:src="@drawable/cam_button_unpressed"
+                android:onClick="onAddTagsClick"
+                android:src="@drawable/tag_button_unpressed"
                 android:layout_weight="2"/>
             
             <HorizontalScrollView android:layout_width="fill_parent"

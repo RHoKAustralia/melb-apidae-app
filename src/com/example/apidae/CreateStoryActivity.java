@@ -28,6 +28,7 @@ import android.widget.LinearLayout.LayoutParams;
 public class CreateStoryActivity extends Activity{
     private static final int CAMERA_REQUEST = 1888;
     private static final int SELECT_FILE = 1899;
+    private static final int TAGS_ADD = 1877;
 	
 	public static String NAME = "Name";
 	public static String TAGS_LIST = "TagsList";
@@ -64,6 +65,11 @@ public class CreateStoryActivity extends Activity{
 		tagAddBtn = (ImageButton)findViewById(R.id.tagImageButton);
 	}
 	
+	public void onAddTagsClick(View v){
+		Intent cameraIntent = new Intent(this, TagSelect.class); 
+        startActivityForResult(cameraIntent, TAGS_ADD); 
+	}
+	
 	public void onAddPhotoClick(View v){
 		
 		final CharSequence[] items = { "Take Photo", "Cancel" };
@@ -95,6 +101,25 @@ public class CreateStoryActivity extends Activity{
 		}
 		if(photos.size()>0){
 			imageAddBtn.setImageResource(R.drawable.cam_button_pressed);
+		}else{
+			imageAddBtn.setImageResource(R.drawable.cam_button_unpressed);
+		}
+	}
+	
+	private void updateTagScroll(ArrayList<Integer> tags){
+		tagScrollLayout.removeAllViews();
+		for(Integer rID : tags){
+			ImageView tIV = new ImageView(this);
+			tIV.setImageResource(rID);
+			tIV.setScaleType(ScaleType.FIT_CENTER);
+			tIV.setPadding(10, 10, 10, 10);
+			LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1);
+			tagScrollLayout.addView(tIV, lp);
+		}
+		if(tags.size()>0){
+			tagAddBtn.setImageResource(R.drawable.tag_button_pressed);
+		}else{
+			tagAddBtn.setImageResource(R.drawable.tag_button_unpressed);
 		}
 	}
 	
@@ -104,26 +129,18 @@ public class CreateStoryActivity extends Activity{
 			case CAMERA_REQUEST:  
 			    if(resultCode == RESULT_OK){ 
 		            Bitmap photo = (Bitmap) data.getExtras().get("data"); 
-		            photos.add(photo);
+		            if(null != photo)
+		            	photos.add(photo);
 			    }
             	break;
-            /*	
-			case SELECT_FILE:
-			    if(resultCode == RESULT_OK){  
-			    	Uri selectedImage = data.getData();
-			         String[] filePathColumn = { MediaStore.Images.Media.DATA };
-			 
-			         Cursor cursor = getContentResolver().query(selectedImage,
-			                 filePathColumn, null, null, null);
-			         cursor.moveToFirst();
-			 
-			         int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-			         String picturePath = cursor.getString(columnIndex);
-			         cursor.close();
-			         
-			         photos.add(BitmapFactory.decodeFile(picturePath));
-			    }
-			    break;*/
+            	
+			case TAGS_ADD:
+				if(resultCode == RESULT_OK){
+					ArrayList<Integer> tags = data.getExtras().getIntegerArrayList(TAGS_LIST);
+					if(null != tags)
+						updateTagScroll(tags);
+				}
+				break;
 		}
 		updateImageScroll();
     } 
