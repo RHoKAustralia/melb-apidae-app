@@ -51,8 +51,9 @@ public class StoryListActivity extends Activity{
 	private void PopulateStoryList(){
 		StoryDBHelper db = new StoryDBHelper(this);
 		List<String> imagePaths = new ArrayList<String>();
+		//if(db.getPicturesCount())
 		
-//		for(int i=0; i<)
+		//for(int i=0; i<)
 		
 		ArrayList<Bitmap> storiesImages = new ArrayList<Bitmap>();
 		for(String path : imagePaths){

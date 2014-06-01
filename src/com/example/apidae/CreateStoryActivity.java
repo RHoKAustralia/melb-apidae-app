@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 import com.example.apidae.db.StoryDBHelper;
+import com.example.apidae.domain.Picture;
 import com.example.apidae.domain.Story;
 
 import android.app.Activity;
@@ -56,6 +57,11 @@ public class CreateStoryActivity extends Activity{
 	
 	//Tag[] tags;
 	ArrayList<Bitmap> photos = new ArrayList<Bitmap>();
+	ArrayList<Uri> photoUris = new ArrayList<Uri>();
+
+	final int MAX_RANGE = 9999;
+	final int MIN_RANGE = 1;
+	public int story_id;
 	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -66,6 +72,8 @@ public class CreateStoryActivity extends Activity{
 			String[] tags = data.getStringArray(TAGS_LIST);
 			String storyName = data.getString(NAME);
 		}
+		
+		story_id = MIN_RANGE + (int)(Math.random() * ((MAX_RANGE - MIN_RANGE) + 1));
 
 		imageScrollLayout = (LinearLayout) findViewById(R.id.photoScroll);
 		audioScrollLayout = (LinearLayout) findViewById(R.id.audioScroll);
@@ -86,16 +94,19 @@ public class CreateStoryActivity extends Activity{
 	}
 	
 	public void addThisStory(View v){
-		final int MAX_RANGE = 9999;
-		final int MIN_RANGE = 1;
 		String story_name = getStoryName();
-		
-		int story_id = MIN_RANGE + (int)(Math.random() * ((MAX_RANGE - MIN_RANGE) + 1));
 		
 		StoryDBHelper dbHelper = new StoryDBHelper(this);
 		Toast.makeText(this, "Saved story \"" + story_name + "\"" + " with ID: " + Integer.toString(story_id), Toast.LENGTH_LONG).show();
 		
 		dbHelper.addStory(new Story(story_id,story_name));
+		
+		//add pictures:
+		for(int i=0; i<photos.size(); i++){
+			Picture p = new Picture(story_id, photoUris.get(i).getPath());
+			dbHelper.addPictureinDB(p);
+		}
+		finish();
 	}
 	
 	public void cancel(View v){
@@ -237,6 +248,7 @@ public class CreateStoryActivity extends Activity{
 		            Bitmap photo = (Bitmap) intent.getExtras().get("data"); 
 		            if(null != photo)
 		            	photos.add(photo);
+		            	photoUris.add(intent.getData());
 			    }
             	break;
             	
