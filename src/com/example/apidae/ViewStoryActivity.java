@@ -83,7 +83,20 @@ public class ViewStoryActivity extends Activity{
 			updateAudioScroll();
 			
 			// tag parsing
-			
+			ArrayList<Integer> rids = extras.getIntegerArrayList(TAG_RID_LIST);
+			updateTagScroll(rids);
+		}
+	}
+	
+	private void updateTagScroll(ArrayList<Integer> tags){
+		tagScroll.removeAllViews();
+		for(Integer rID : tags){
+			ImageView tIV = new ImageView(this);
+			tIV.setImageResource(rID);
+			tIV.setScaleType(ScaleType.FIT_CENTER);
+			tIV.setPadding(10, 10, 10, 10);
+			LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1);
+			tagScroll.addView(tIV, lp);
 		}
 	}
 	

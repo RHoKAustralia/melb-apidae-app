@@ -42,6 +42,7 @@ public class CreateStoryActivity extends Activity{
 	
 	
 	EditText storyNameField;
+	EditText nameField;
 	LinearLayout imageScrollLayout;
 	LinearLayout audioScrollLayout;
 	LinearLayout tagScrollLayout;
@@ -70,6 +71,15 @@ public class CreateStoryActivity extends Activity{
 		imageAddBtn = (ImageButton)findViewById(R.id.photoImageButton);
 		audioAddBtn = (ImageButton)findViewById(R.id.audioImageButton);
 		tagAddBtn = (ImageButton)findViewById(R.id.tagImageButton);
+		storyNameField = (EditText)findViewById(R.id.storyNameField);
+		nameField = (EditText)findViewById(R.id.nameField);
+	}
+	
+	private String getStoryName(){
+		return storyNameField.getText().toString();
+	}
+	private String getName(){
+		return nameField.getText().toString();
 	}
 	
 	public void onAddTagsClick(View v){

@@ -18,17 +18,30 @@
         
         <LinearLayout android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="0.5">
             <TextView android:layout_weight="2.5"
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"/>
         	<!-- Name of story edit text: -->
-	        <EditText android:id="@+id/storyNameField"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_gravity="center_vertical"
-	            android:hint="Enter name of story"
-	            android:layout_weight="1"/>
+        	
+        	<LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+		        <EditText android:id="@+id/nameField"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="Your Name"
+		            android:layout_weight="1"/>
+		        
+		        <EditText android:id="@+id/storyNameField"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="Story Name"
+		            android:layout_weight="1"/>
+	        </LinearLayout>
             
             <TextView android:layout_weight="2.5"
 	            android:layout_width="fill_parent"
