@@ -22,29 +22,30 @@
         android:icon="@drawable/ic_launcher"
         android:allowBackup="true"
         android:label="@string/app_name" >
-        <!-- <meta-data
-   		android:name="com.google.android.gms.version"
-    	android:value="@integer/google_play_services_version" /> -->
-        
         <activity
-            android:name="com.example.apidae.SelectVillageActivity"
+            android:name=".SelectVillageActivity"
             android:label="@string/app_name" >
-        
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.example.apidae.MainActivity" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        
+
         </activity>
         
         <activity
-            android:name=".LocationSelectActivity"
+            android:name=".StoryListActivity"
             android:label="@string/app_name" >
         </activity>
         
         <activity
-            android:name=".ViewVillageActivity"
+            android:name=".ViewStoryActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".AudioMain"
             android:label="@string/app_name" >
         </activity>
         
@@ -52,15 +53,12 @@
             android:name="com.example.apidae.CreateStoryActivity"
             android:label="@string/app_name" >
         </activity>
+
         <activity
-            android:name="com.example.apidae.ViewStoryActivity"
+            android:name="com.example.apidae.TagSelect"
             android:label="@string/app_name" >
         </activity>
-        <activity
-            android:name="com.example.apidae.StoryListActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
+
         <meta-data
     	android:name="com.google.android.maps.v2.API_KEY"
     	android:value="AIzaSyD97ntnNDw2WhObVyJMP9X9Hdfe1fiSAHw"/>
