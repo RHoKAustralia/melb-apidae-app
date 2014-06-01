@@ -18,6 +18,7 @@ import android.os.Debug;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -68,11 +69,27 @@ public class StoryListActivity extends Activity{
 	}
 	
 	public void newStory(View v){
+		PopulateStoryList();
 		Intent i = new Intent(v.getContext(), CreateStoryActivity.class);
 		startActivity(i);
 	}
 	
 	private void PopulateStoryList(){
+		storyListLayout.removeAllViews();
+		
+		Button b= new Button(this);
+		b.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+		b.setText("New Story");
+		b.setTextSize(24);
+		b.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				newStory(v);
+			}
+		});
+		storyListLayout.addView(b);
+		
 		StoryDBHelper db = new StoryDBHelper(this);
 		List<String> imagePaths = new ArrayList<String>();
 		List<Integer> story_ids = db.getAllStoryIds();
@@ -105,5 +122,8 @@ public class StoryListActivity extends Activity{
 		}
 	}
 	
-//	public void addStories()
+	public void onResume(){
+		super.onResume();
+		PopulateStoryList();
+	}
 }
