@@ -78,35 +78,20 @@ public class StoryListActivity extends Activity{
 		List<Integer> story_ids = db.getAllStoryIds();
 		for(int i : story_ids){
 			List<Bitmap> bs = new ArrayList<Bitmap>();
+            Log.d("Test", Integer.toString(i));
+            Log.d("Test", Integer.toString(db.getAllPictures(i).size()));
 			for(Picture p : db.getAllPictures(i)){
-				try{
-					FileInputStream in;
-			        BufferedInputStream buf;
-			        in = new FileInputStream(p.getPicture_path());
-		            buf = new BufferedInputStream(in);
-		            byte[] bMapArray;
-					bMapArray = new byte[buf.available()];
-		            buf.read(bMapArray);
-		            Bitmap bMap = BitmapFactory.decodeByteArray(bMapArray, 0, bMapArray.length);
-		            bs.add(bMap);
-		            if (in != null) {
-		             	in.close();
-	                }
-	                if (buf != null) {
-		             	buf.close();
-	                }
-				}catch(Exception e){
-					Toast.makeText(getApplicationContext(), "Error Reading Images", Toast.LENGTH_LONG).show();
-				}
+				Bitmap bMap = BitmapFactory.decodeFile(p.getPicture_path());
+	            bs.add(bMap);
 			}
+			System.out.println(db.getAllPictures(i).get(0).getPicture_path());
 			
 			LinearLayout tll = new LinearLayout(this);
-			tll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			tll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 			tll.setOrientation(LinearLayout.HORIZONTAL);
 			
 			ImageView picB = new ImageView(this);
 			picB.setImageBitmap(bs.get(0));
-			picB.setScaleType(ScaleType.FIT_CENTER);
 			LayoutParams lp = new LayoutParams((int)(bs.get(0).getWidth()*2), LayoutParams.MATCH_PARENT, 1);
 			tll.addView(picB, lp);
 			

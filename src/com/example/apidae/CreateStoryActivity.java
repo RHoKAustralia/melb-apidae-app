@@ -102,11 +102,21 @@ public class CreateStoryActivity extends Activity{
 		dbHelper.addStory(new Story(story_id,story_name));
 		
 		//add pictures:
-		for(int i=0; i<photos.size(); i++){
-			Picture p = new Picture(story_id, photoUris.get(i).getPath());
+		for(int i=0; i<photoUris.size(); i++){
+			Picture p = new Picture(story_id, getPath(photoUris.get(i)));
 			dbHelper.addPictureinDB(p);
 		}
 		finish();
+	}
+	private String getPath(Uri uri) {
+
+	    String[] projection = { MediaStore.Images.Media.DATA };
+	    Cursor cursor = getContentResolver().query(uri, projection, null, null,null);
+
+	    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+	    cursor.moveToFirst();
+
+	    return cursor.getString(column_index);
 	}
 	
 	public void cancel(View v){
@@ -246,9 +256,10 @@ public class CreateStoryActivity extends Activity{
 			case CAMERA_REQUEST:  
 			    if(resultCode == RESULT_OK){ 
 		            Bitmap photo = (Bitmap) intent.getExtras().get("data"); 
-		            if(null != photo)
+		            if(null != photo){
 		            	photos.add(photo);
 		            	photoUris.add(intent.getData());
+		            }
 			    }
             	break;
             	
