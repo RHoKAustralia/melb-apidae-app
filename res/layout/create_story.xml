@@ -3,13 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="New Story"
-        android:gravity="center"
-        android:textSize="36dp"/>
     
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -47,13 +40,6 @@
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"/>
         </LinearLayout>
-        
-        <TextView android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="2.5"
-	        android:text="Map goes here"
-	        android:gravity="center"
-	        android:textSize="20dp"/>
         
     </LinearLayout>
     
@@ -136,6 +122,37 @@
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_gravity="center">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+    
+	  	<Button android:id="@+id/storyCancelButton" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="Cancel"
+	        android:onClick="cancel"
+	        android:gravity="center"
+	        android:textSize="30dp"/>
+	    
+	    <Button android:id="@+id/storyDoneButton" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="Done"
+	        android:onClick="addThisStory"
+	        android:gravity="center"
+	        android:textSize="30dp"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+	    
     </LinearLayout>
 
 </LinearLayout>

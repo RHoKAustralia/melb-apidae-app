@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 
+import com.example.apidae.db.StoryDBHelper;
+import com.example.apidae.domain.Story;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -80,6 +83,23 @@ public class CreateStoryActivity extends Activity{
 	}
 	private String getName(){
 		return nameField.getText().toString();
+	}
+	
+	public void addThisStory(View v){
+		final int MAX_RANGE = 9999;
+		final int MIN_RANGE = 1;
+		String story_name = getStoryName();
+		
+		int story_id = MIN_RANGE + (int)(Math.random() * ((MAX_RANGE - MIN_RANGE) + 1));
+		
+		StoryDBHelper dbHelper = new StoryDBHelper(this);
+		Toast.makeText(this, "Saved story \"" + story_name + "\"" + " with ID: " + Integer.toString(story_id), Toast.LENGTH_LONG).show();
+		
+		dbHelper.addStory(new Story(story_id,story_name));
+	}
+	
+	public void cancel(View v){
+		finish();
 	}
 	
 	public void onAddTagsClick(View v){
