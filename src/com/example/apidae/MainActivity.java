@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     }
 
     public void viewVillages(View view) {
-        Intent intent = new Intent(this, LocationSelectActivity.class);
+        Intent intent = new Intent(this, SelectVillageActivity.class);
         startActivity(intent);
     }
 }

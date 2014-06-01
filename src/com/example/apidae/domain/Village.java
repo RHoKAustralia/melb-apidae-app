@@ -4,6 +4,11 @@ public class Village {
     String name = "";
     Integer rank = null;
 
+    public Village(String name, int rank){
+        this.name = name;
+        this.rank = rank;
+    }
+
     public String getName() {
         return name;
     }
