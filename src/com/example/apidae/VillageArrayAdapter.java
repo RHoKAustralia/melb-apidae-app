@@ -37,6 +37,7 @@ public class VillageArrayAdapter extends ArrayAdapter<String> {
 
     private int resourceForRank(int position) {
         int[] resources = new int[] {R.drawable.badge1, R.drawable.badge2, R.drawable.badge3, R.drawable.badge4};
-        return resources[position];
+        if (position < 3) return resources[position];
+        else return resources[3];
     }
 }
