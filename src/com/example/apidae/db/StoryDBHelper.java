@@ -124,4 +124,21 @@ public class StoryDBHelper extends SQLiteOpenHelper{
         // return count
         return cursor.getCount();
     }
+    
+    public List<Integer> getAllStoryIds()
+    {
+            List<Integer> storyIdList = new ArrayList<Integer>();
+    
+            String selectQuery = "SELECT * FROM " + TABLE_PICTURE;
+                 
+            SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        
+        if (cursor.moveToFirst()) {
+            do {
+                    storyIdList.add(Integer.parseInt(cursor.getString(0)));
+            } while (cursor.moveToNext());
+        }
+            return storyIdList;
+    }
 }

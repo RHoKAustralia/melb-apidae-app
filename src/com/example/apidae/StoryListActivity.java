@@ -40,8 +40,18 @@ public class StoryListActivity extends Activity{
 			int rank = extras.getInt(VILLAGE_RANKING_INT);
 			switch(rank){
 				case 1:
-					//villageRanking.setImageResource(R.drawable)
+					villageRanking.setImageResource(R.drawable.badge1);
 					break;
+				case 2:
+					villageRanking.setImageResource(R.drawable.badge2);
+					break;
+				case 3:
+					villageRanking.setImageResource(R.drawable.badge3);
+					break;
+				case 4:
+					villageRanking.setImageResource(R.drawable.badge4);
+					break;
+					
 			}
 		}
 		

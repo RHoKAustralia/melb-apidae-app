@@ -12,13 +12,12 @@
         <TextView android:id="@+id/villageNameText"
             android:paddingLeft="26dp"
             android:layout_width="wrap_content"
-            android:text="test"
+            android:text=""
             android:textSize="20dp"
             android:gravity="center"
             android:layout_height="fill_parent"/>
         <ImageView android:id="@+id/villageRankingImage"
             android:layout_width="wrap_content"
-            android:src="@drawable/badge"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"/>
         
