@@ -53,7 +53,8 @@ public class SelectVillageActivity extends ListActivity {
         Bundle villageInfo = new Bundle();
         villageInfo.putString(StoryListActivity.VILLAGE_NAME_STRING, name);
         villageInfo.putInt(StoryListActivity.VILLAGE_RANKING_INT, rank);
-        startActivity(intent, villageInfo);
+        intent.putExtras(villageInfo);
+        startActivity(intent);
     }
 
 }

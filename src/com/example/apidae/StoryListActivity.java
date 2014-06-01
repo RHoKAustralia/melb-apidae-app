@@ -11,6 +11,8 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Debug;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,8 +34,8 @@ public class StoryListActivity extends Activity{
 		storyListLayout = (LinearLayout)findViewById(R.id.storyScrollLayout);
 		villageName = (TextView)findViewById(R.id.villageNameText);
 		villageRanking = (ImageView)findViewById(R.id.villageRankingImage);
-		
 		Bundle extras = getIntent().getExtras();
+		Log.d("",extras.toString());
 		if(null != extras){
 			String vName = extras.getString(VILLAGE_NAME_STRING);
 			villageName.setText(vName);
