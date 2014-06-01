@@ -29,9 +29,14 @@ public class VillageArrayAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.view_village_list, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.name);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.rank);
-        imageView.setImageResource(R.drawable.badge);
+        imageView.setImageResource(resourceForRank(position));
         textView.setText(villages[position].getName());
 
         return rowView;
+    }
+
+    private int resourceForRank(int position) {
+        int[] resources = new int[] {R.drawable.badge1, R.drawable.badge2, R.drawable.badge3, R.drawable.badge4};
+        return resources[position];
     }
 }
