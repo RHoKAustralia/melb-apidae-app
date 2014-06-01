@@ -6,17 +6,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.apidae.db.StoryDBHelper;
+import com.example.apidae.domain.Picture;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.os.Bundle;
 import android.os.Debug;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout.LayoutParams;
 
 public class StoryListActivity extends Activity{
 	
@@ -60,34 +67,56 @@ public class StoryListActivity extends Activity{
 		PopulateStoryList();
 	}
 	
+	public void newStory(View v){
+		Intent i = new Intent(v.getContext(), CreateStoryActivity.class);
+		startActivity(i);
+	}
+	
 	private void PopulateStoryList(){
 		StoryDBHelper db = new StoryDBHelper(this);
 		List<String> imagePaths = new ArrayList<String>();
-		//if(db.getPicturesCount())
-		
-		//for(int i=0; i<)
-		
-		ArrayList<Bitmap> storiesImages = new ArrayList<Bitmap>();
-		for(String path : imagePaths){
-			try{
-				FileInputStream in;
-		        BufferedInputStream buf;
-		        in = new FileInputStream(path);
-	            buf = new BufferedInputStream(in);
-	            byte[] bMapArray;
-				bMapArray = new byte[buf.available()];
-	            buf.read(bMapArray);
-	            Bitmap bMap = BitmapFactory.decodeByteArray(bMapArray, 0, bMapArray.length);
-	            storiesImages.add(bMap);
-	            if (in != null) {
-	             	in.close();
-                }
-                if (buf != null) {
-	             	buf.close();
-                }
-			}catch(Exception e){
-				Toast.makeText(getApplicationContext(), "Error Reading Images", Toast.LENGTH_LONG).show();
+		List<Integer> story_ids = db.getAllStoryIds();
+		for(int i : story_ids){
+			List<Bitmap> bs = new ArrayList<Bitmap>();
+			for(Picture p : db.getAllPictures(i)){
+				try{
+					FileInputStream in;
+			        BufferedInputStream buf;
+			        in = new FileInputStream(p.getPicture_path());
+		            buf = new BufferedInputStream(in);
+		            byte[] bMapArray;
+					bMapArray = new byte[buf.available()];
+		            buf.read(bMapArray);
+		            Bitmap bMap = BitmapFactory.decodeByteArray(bMapArray, 0, bMapArray.length);
+		            bs.add(bMap);
+		            if (in != null) {
+		             	in.close();
+	                }
+	                if (buf != null) {
+		             	buf.close();
+	                }
+				}catch(Exception e){
+					Toast.makeText(getApplicationContext(), "Error Reading Images", Toast.LENGTH_LONG).show();
+				}
 			}
+			
+			LinearLayout tll = new LinearLayout(this);
+			tll.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			tll.setOrientation(LinearLayout.HORIZONTAL);
+			
+			ImageView picB = new ImageView(this);
+			picB.setImageBitmap(bs.get(0));
+			picB.setScaleType(ScaleType.FIT_CENTER);
+			LayoutParams lp = new LayoutParams((int)(bs.get(0).getWidth()*2), LayoutParams.MATCH_PARENT, 1);
+			tll.addView(picB, lp);
+			
+			TextView tV = new TextView(this);
+			tV.setText("Story N");
+			tV.setGravity(Gravity.CENTER);
+			LayoutParams ltV = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1);
+			tll.addView(tV, ltV);
+			
+			storyListLayout.addView(tll);
 		}
 	}
 	
