@@ -10,13 +10,14 @@ import com.example.apidae.domain.Village;
 
 public class SelectVillageActivity extends ListActivity {
 
-    private final String[] VILLAGE_NAMES = new String[]{"Lautoka", "Nadi", "Momi", "Sigatoka"};
+    private final String[] VILLAGE_NAMES = new String[]{"Lautoka", "Nadi", "Momi", "Sigatoka", "Hawthorn"};
 
     private final Village[] VILLAGES = new Village[]{
             new Village("Lautoka", 1),
             new Village("Nadi", 2),
             new Village("Momi", 3),
-            new Village("Sigatoka", 4)};
+            new Village("Sigatoka", 4),
+            new Village("Hawthorn", 5)};
 
     /**
      * Called when the activity is first created.

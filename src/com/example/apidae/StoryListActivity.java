@@ -57,7 +57,7 @@ public class StoryListActivity extends Activity{
 				case 3:
 					villageRanking.setImageResource(R.drawable.badge3);
 					break;
-				case 4:
+				default:
 					villageRanking.setImageResource(R.drawable.badge4);
 					break;
 					
