@@ -1,3 +1,5 @@
 apidae-app.iml
 .idea/*
 build/*
+bin/*
+gen/*
