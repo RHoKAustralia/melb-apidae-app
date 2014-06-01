@@ -52,18 +52,16 @@ public class AudioMain extends Activity{
 		@Override
 		public void onClick(View v) {
 
-			switch(v.getId())
-			{
-			case R.id.start_audio_recording:
+			
+			if (v.getId() == R.id.start_audio_recording) {
 				Toast.makeText(getApplicationContext(), "Starting Recording", Toast.LENGTH_LONG).show();
 				//startRecording();
 				Intent recordIntent = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
 				startActivityForResult(recordIntent, REQUESTCODE_RECORDING);
-				break;
-			case R.id.exit_audio_recording:
+			}
+			else if (v.getId() == R.id.exit_audio_recording) {
 				Toast.makeText(getApplicationContext(), "Exit Recording", Toast.LENGTH_LONG).show();
 				//stopRecording();
-				break;
 			}
 		}
 	};
