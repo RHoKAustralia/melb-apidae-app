@@ -1,0 +1,262 @@
+[33mcommit dd835a3a68bac3eb4ad55c242decf36ae433b4bd[m
+Merge: 36672b5 e82620f
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 13:40:32 2014 +1000
+
+    Merge branch 'master' of https://github.com/rhok-melbourne/apidae-app
+
+[33mcommit 36672b542ba99f15ded6ee49629b34d664e696c8[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 13:39:55 2014 +1000
+
+    final
+
+[33mcommit e82620f557c027f23a5b1dcc6f7f4204a06fd573[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 13:22:52 2014 +1000
+
+    Add Hawthorn to dummy villages list
+
+[33mcommit e8cb4368318fc8a8e69ab401306f2a72ccda104c[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 13:18:07 2014 +1000
+
+    Add all activities to Android Manifest, with SelectVillageActivity as the launching activity
+
+[33mcommit faa628eea6f5765738111eb71fc1eaa35404ba51[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 13:33:32 2014 +1000
+
+    list
+
+[33mcommit 2e1f5df61cefc18d20b9d19507f25169f58f1cd9[m
+Merge: dd39052 b31acb2
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 13:11:37 2014 +1000
+
+    Merge branch 'master' of https://github.com/rhok-melbourne/apidae-app
+
+[33mcommit dd390523e14325d0d2955da9ac5061198d70570d[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 13:11:28 2014 +1000
+
+    changes
+
+[33mcommit b31acb25c0130c42bc774cae35ae93cc8a5de168[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 13:07:51 2014 +1000
+
+    Fix rank bug in SelectVillageActivity
+
+[33mcommit 7972994d19c2730e66913cb334dc34fadb9d641b[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 12:53:39 2014 +1000
+
+    changes
+
+[33mcommit 74f1f2d1c923e972f7ff991e5d28b11c09507863[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 12:44:38 2014 +1000
+
+    changes
+
+[33mcommit aff67fe8b063d168b7ef7e335c54e23d0e588a7c[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 12:34:30 2014 +1000
+
+    changes (Konrad)
+
+[33mcommit 46015e6c8f52ac8b473dbc2a86c6049641b51599[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 12:22:34 2014 +1000
+
+    Merge
+
+[33mcommit b74e38e98b6c7541386fd395bd75650c0d7645f0[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 12:20:03 2014 +1000
+
+    Again, git rm .idea directory
+
+[33mcommit 6037cee9ab01023ee740f477ed4e024fc36cb57d[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sun Jun 1 12:09:11 2014 +1000
+
+    List villages with a generic rank icon next to the village name
+
+[33mcommit 46fd5508810d582e15dcd90b822cf5cf4666dfe9[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 12:15:41 2014 +1000
+
+    story list
+
+[33mcommit 48ab09351efaab848fcf1185d0a727378c830cf6[m
+Author: Scott <svel12@JMSSX220VEL0001-linux>
+Date:   Sun Jun 1 11:41:16 2014 +1000
+
+    manifest changes
+
+[33mcommit d139203c104900f989e5ce0f78ea760f65c4ab75[m
+Author: Scott <svel12@JMSSX220VEL0001-linux>
+Date:   Sun Jun 1 11:39:38 2014 +1000
+
+    min Api level raised to 11 so google maps will work
+
+[33mcommit 6e32247c51c75b9658c9c60f4294591c6ac600d6[m
+Merge: 7811eb7 9ae586f
+Author: Scott <svel12@JMSSX220VEL0001-linux>
+Date:   Sun Jun 1 11:38:33 2014 +1000
+
+    Merge branch 'master' of https://github.com/rhok-melbourne/apidae-app.git
+
+[33mcommit 9ae586f0a60f1d567b5d2c6b40c609db96cf4b6c[m
+Author: ipla2 <ipla2@JMSSX220PLA0001.AD.MONASH.EDU>
+Date:   Sun Jun 1 11:39:05 2014 +1000
+
+    Map layout/activity updated for google maps
+
+[33mcommit 7811eb7e25bfcd258d16f180589769ef95f84888[m
+Author: Scott <svel12@JMSSX220VEL0001-linux>
+Date:   Sun Jun 1 11:36:14 2014 +1000
+
+    Manifest fix
+
+[33mcommit ad11761a69f4dba234a7961b3694e96e6e4a0dee[m
+Author: ipla2 <ipla2@JMSSX220PLA0001.AD.MONASH.EDU>
+Date:   Sun Jun 1 11:21:53 2014 +1000
+
+    Map activity
+
+[33mcommit eff554051eb46633e006a955fb3cb1d5cb017c1c[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 11:04:01 2014 +1000
+
+    story list activity
+
+[33mcommit f8b73ef9a62af0c2dd4b2fb77938ad8a87f8c56c[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 10:09:54 2014 +1000
+
+    view story changes
+
+[33mcommit d935f5152396136679c6751eb5e038f096fcc09c[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 09:50:24 2014 +1000
+
+    worked on create new story
+
+[33mcommit c2f32245139db6f284f4bd58a143a637c93388f3[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sun Jun 1 00:20:35 2014 +1000
+
+    added tagging features
+
+[33mcommit 0c748ec6ffb622eb56cb48d697f5c86f8c35294a[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sat May 31 22:17:44 2014 +1000
+
+    add story activity worked on by konrad
+
+[33mcommit 6089ae6cf7b0163a7861579599a2865196d92a62[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sat May 31 20:50:41 2014 +1000
+
+    update
+
+[33mcommit 18ec8db0004bd99b21dabe75234e450e856f0d55[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sat May 31 20:13:59 2014 +1000
+
+    changed package name
+
+[33mcommit 1e1032d31fc04a1690552b9f5a635f6f0b9a91a4[m
+Author: konrad-c <ironeye42@gmail.com>
+Date:   Sat May 31 20:09:50 2014 +1000
+
+    Create story activity with camera functionality
+
+[33mcommit 798b7d26204ccc6b954f4e38b75bd5daa2d47095[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 18:49:03 2014 +1000
+
+    Attempt to populate village list with data from local sqlite db
+
+[33mcommit ad7b224bb1b1c7c59e87f993bcf6055491e07f5a[m
+Author: Amit_Kashyap01 <Amit_Kashyap01@BLRKEC87386L.ad.infosys.com>
+Date:   Sat May 31 13:41:20 2014 +0530
+
+    Changing in Android manifest file and adding audio_main.xml
+
+[33mcommit f9e3f55c859c08cdad5048a0d140786883aa1280[m
+Merge: 48e5d56 11462c8
+Author: Amit_Kashyap01 <Amit_Kashyap01@BLRKEC87386L.ad.infosys.com>
+Date:   Sat May 31 13:34:28 2014 +0530
+
+    Merge branch 'master' of https://github.com/rhok-melbourne/apidae-app.git
+
+[33mcommit 48e5d560f8ba164e830130d62e8169aa7a6c4edd[m
+Author: Amit_Kashyap01 <Amit_Kashyap01@BLRKEC87386L.ad.infosys.com>
+Date:   Sat May 31 13:28:02 2014 +0530
+
+    Adding new class for Audio
+
+[33mcommit 11462c8efc7d8cf2330d041280d48ac0116e65c2[m
+Author: konrad-c <cyb0001@jmss.vic.edu.au>
+Date:   Sat May 31 17:01:35 2014 +1000
+
+    Konrad: Added the create story screen
+
+[33mcommit c59bb15e49b57866fbd12f93d998f382fe2a2b18[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 16:21:19 2014 +1000
+
+    Add an initial activity which points to the village list page
+
+[33mcommit b7791f1ec88d901cb3ea890c65946cd70ca3e70d[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 15:04:35 2014 +1000
+
+    XML files should be in snake_case not camelCase!  Oops
+
+[33mcommit e44bbd70dfa4bb26717dfe9e7db67a08c32cf4df[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 14:03:34 2014 +1000
+
+    Remove .idea/workspace.xml
+
+[33mcommit ad4d5d8090a6c6b4694d0948a5bc946750aa2c71[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 14:00:28 2014 +1000
+
+    Remove .idea directory from git and ignore it.  Add stub of some activities and views.
+
+[33mcommit e55078aeb0a9f39eb772bc69952b4f7894ab95f0[m
+Merge: acc2dde 4dca7e2
+Author: albertjou <albert_jou@hotmail.com>
+Date:   Sat May 31 12:29:46 2014 +1000
+
+    Merge branch 'master' of https://github.com/rhok-melbourne/apidae-app
+
+[33mcommit 4dca7e2bce1cbdcc4a9f75c3ee31ed9e295bb314[m
+Author: Konrad Cybulski <cyb0001@jmss.vic.edu.au>
+Date:   Sat May 31 12:27:32 2014 +1000
+
+    Commented on main class
+
+[33mcommit acc2dde78c9980c87074a7774022fa531d92fb2e[m
+Author: albertjou <albert_jou@hotmail.com>
+Date:   Sat May 31 12:27:28 2014 +1000
+
+    Change the readme info
+
+[33mcommit 36f5e653c4db27451f11826091f1bb7a1a348426[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 12:18:22 2014 +1000
+
+    Initial commit
+
+[33mcommit aed28ec68d98a7cc69fb1b6960543cba6d59ece8[m
+Author: Magdalena Cervantes Cassel <magdalena.cassel@gmail.com>
+Date:   Sat May 31 11:48:05 2014 +1000
+
+    Initial commit
